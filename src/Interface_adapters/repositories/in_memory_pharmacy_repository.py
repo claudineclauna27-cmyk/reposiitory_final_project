@@ -1,7 +1,7 @@
 import copy
 from typing import Optional, List
 from src.entities.medicine import Medicine
-from uscases.interfaces.medicine_repo import IMedicineRepository
+from src.uscases.interfaces.medicine_repo import IMedicineRepository
 
 class MedicineRepositoryInMemory(IMedicineRepository):
     def __init__(self):
