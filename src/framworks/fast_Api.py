@@ -11,9 +11,9 @@ def create_app(repository=None) -> FastAPI:
     # ------------------------------------------------------------------
     if repository is None:
         repository = PostgresMedicineRepository(
-            dbname="pharmacy_db",
+            dbname="my_database",
             user="postgres",
-            password="ton_mot_de_passe",
+            password="40501522S",
             host="localhost",
             port="5432"
         )

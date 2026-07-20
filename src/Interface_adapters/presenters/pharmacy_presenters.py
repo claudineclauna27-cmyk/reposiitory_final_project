@@ -6,7 +6,6 @@ class MedicinePresenter:
     @staticmethod
     def to_dict(medicine: Medicine) -> Dict[str, Any]:
         return {
-            "id": medicine.id,
             "nom": medicine.nom,
             "prix": medicine.prix,
             "quantite": medicine.quantite,
@@ -21,5 +20,5 @@ class MedicinePresenter:
     @staticmethod
     def to_cli_row(medicine: Medicine) -> str:
         status = "EXPIRÉ" if medicine.est_expire() else "VALIDE"
-        return f"{medicine.id:<5} | {medicine.nom:<20} | {medicine.prix:>6.2f} | {medicine.quantite:>3} | {status}"
+        return f" {medicine.nom:<20} | {medicine.prix:>6.2f} | {medicine.quantite:>3} | {status}"
 

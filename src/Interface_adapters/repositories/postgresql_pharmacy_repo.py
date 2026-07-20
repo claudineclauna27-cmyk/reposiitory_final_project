@@ -55,3 +55,9 @@ class PostgresMedicineRepository(IMedicineRepository):
         self.cursor.execute("SELECT id, nom, prix, quantite, date_expiration FROM medicament")
         rows = self.cursor.fetchall()
         return [Medicine(*row) for row in rows]
+
+
+    def list_all(self):
+        return super().list_all()
+
+    
